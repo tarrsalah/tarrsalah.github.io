@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
+	<title>tarrsalah</title>
+	<subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
+	<link href="https://tarrsalah.com/feed/feed.xml" rel="self"/>
+	<link href="https://tarrsalah.com/"/>
+	<updated>2024-04-19T21:21:16Z</updated>
+	<id>https://tarrsalah.com/</id>
+	<author>
+		<name>Salah Eddine Taouririt</name>
+		<email>tarrsalah@gmail.com</email>
+	</author>
+</feed>
