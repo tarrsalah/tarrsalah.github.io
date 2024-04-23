@@ -1,6 +1,6 @@
 ---
 title: Minimal python setup
-description: This is a post.
+description: Minimal python setup.
 date: 2023-05-12
 slug: minimalpythonsetup
 tags:
