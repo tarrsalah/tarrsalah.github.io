@@ -1,0 +1,9 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: TIL
+  order: 2
+---
+<h1>Today I learned</h1>
+{% set noteslist = collections.TIL %}
+{% include "noteslist.njk" %}
