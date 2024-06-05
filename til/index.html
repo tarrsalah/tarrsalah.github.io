@@ -8,7 +8,8 @@
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="tarrsalah">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="tarrsalah">
 		
-		<style>* { box-sizing: border-box; }
+		<style>.postlist { counter-reset: start-from 2 }
+* { box-sizing: border-box; }
 /* Defaults */
 :root {
 	--font-family: sans-serif;
@@ -276,31 +277,37 @@ h2 + .header-anchor {
 				<ul class="nav">
 					<li class="nav-item"><a href="/">Home</a></li>
 					<li class="nav-item"><a href="/notes/">notes</a></li>
-					<li class="nav-item"><a href="/til/">TIL</a></li>
+					<li class="nav-item"><a href="/til/" aria-current="page">TIL</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main id="skip">
 			
-<h1 id="content-not-found" tabindex="-1">Content not found. <a class="header-anchor" href="#content-not-found">#</a></h1>
-<p>Go <a href="/">home</a>.</p>
-<!--
+<h1>Today I learned</h1>
 
-Read more: https://www.11ty.dev/docs/quicktips/not-found/
 
-This will work for both GitHub pages and Netlify:
+<ul reversed class="postlist">
+  
+	<li class="postlist-item">
+	  <a href="/til/jupyterdocker/" class="postlist-link">
+        Run jupyter in docker
+      </a>
+      <time class="postlist-date" datetime="2023-05-12">5/12/2023</time>
+      
+      
+      
+	  
+	</li>
+  
+</ul>
 
-* https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/
-* https://www.netlify.com/docs/redirects/#custom-404
-
--->
 
 
 		</main>
 
 		<footer></footer>
 
-		<!-- Current page: /404.html -->
+		<!-- Current page: /til/ -->
 	</body>
 </html>

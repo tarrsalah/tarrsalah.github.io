@@ -3,12 +3,58 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>tarrsalah</title>
-		<meta name="description" content="I am writing about my experiences as a naval navel-gazer.">
+		<title>Run jupyter in docker</title>
+		<meta name="description" content="Run jupyter in docker">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="tarrsalah">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="tarrsalah">
 		
-		<style>* { box-sizing: border-box; }
+		<style>code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+* { box-sizing: border-box; }
 /* Defaults */
 :root {
 	--font-family: sans-serif;
@@ -283,24 +329,25 @@ h2 + .header-anchor {
 
 		<main id="skip">
 			
-<h1 id="content-not-found" tabindex="-1">Content not found. <a class="header-anchor" href="#content-not-found">#</a></h1>
-<p>Go <a href="/">home</a>.</p>
-<!--
+<h1>Run jupyter in docker</h1>
 
-Read more: https://www.11ty.dev/docs/quicktips/not-found/
+<ul class="post-metadata">
+	<li><time datetime="2023-05-12">12 May 2023</time></li>
+	<li><a href="/tags/til/" class="post-tag">TIL</a>, </li>
+	<li><a href="/tags/python/" class="post-tag">python</a>, </li>
+	<li><a href="/tags/jupyter/" class="post-tag">jupyter</a>, </li>
+	<li><a href="/tags/docker/" class="post-tag">docker</a></li>
+</ul>
 
-This will work for both GitHub pages and Netlify:
-
-* https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/
-* https://www.netlify.com/docs/redirects/#custom-404
-
--->
+<p>To avoid dealing with macOS issues, it is useful to run an isolated Jupyter
+instance inside a Docker container with the following command</p>
+<pre class="language-code" tabindex="0"><code class="language-code">docker run -it --rm -p 8888:8888 -v  .:/home/jovyan/ -e GRANT_SUDO=yes --user root jupyter/base-notebook:latest start-notebook.sh --NotebookApp.token=''</code></pre>
 
 
 		</main>
 
 		<footer></footer>
 
-		<!-- Current page: /404.html -->
+		<!-- Current page: /til/jupyterdocker/ -->
 	</body>
 </html>
