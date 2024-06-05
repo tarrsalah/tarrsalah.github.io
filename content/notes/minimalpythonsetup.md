@@ -7,8 +7,7 @@ tags:
   - python
 ---
 
-Mastery of tools is key. Here's how I manage my day-to-day Python workflow with
-essential tools and practices.
+Here's how I manage my day-to-day Python workflow recently.
 
 ## asdf
 I rely on [asdf](https://asdf-vm.com/) for handling multiple Python versions. I
