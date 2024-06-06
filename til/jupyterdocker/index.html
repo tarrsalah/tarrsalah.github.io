@@ -341,7 +341,15 @@ h2 + .header-anchor {
 
 <p>To avoid dealing with macOS issues, it is useful to run an isolated Jupyter
 instance inside a Docker container with the following command</p>
-<pre class="language-code" tabindex="0"><code class="language-code">docker run -it --rm -p 8888:8888 -v  .:/home/jovyan/ -e GRANT_SUDO=yes --user root jupyter/base-notebook:latest start-notebook.sh --NotebookApp.token=''</code></pre>
+<pre class="language-code" tabindex="0"><code class="language-code">docker run -it --rm \
+    -p 8888:8888 \
+    -v .:/home/jovyan/ \
+    -e GRANT_SUDO=yes \
+    --user root \
+    jupyter/base-notebook:latest \
+    start-notebook.sh \
+    --NotebookApp.token=''
+</code></pre>
 
 
 		</main>
