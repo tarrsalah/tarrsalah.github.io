@@ -339,8 +339,6 @@ h2 + .header-anchor {
 	<li><a href="/tags/docker/" class="post-tag">docker</a></li>
 </ul>
 
-<p>To avoid dealing with macOS issues, it is useful to run an isolated Jupyter
-instance inside a Docker container with the following command</p>
 <pre class="language-code" tabindex="0"><code class="language-code">docker run -it --rm \
     -p 8888:8888 \
     -v .:/home/jovyan/ \
@@ -350,6 +348,8 @@ instance inside a Docker container with the following command</p>
     start-notebook.sh \
     --NotebookApp.token=''
 </code></pre>
+<p>To run an isolated jupyter instance inside a Docker container, this command
+assumes that the notebooks are in the current directory.</p>
 
 
 		</main>
