@@ -344,15 +344,14 @@ blog</a>),
 All new created S3 buckets will have block public access configuration enabled
 per default.</p>
 <p>The default configuration looks similar to this terraform code</p>
-<pre><code>resource &quot;aws_s3_bucket_public_access_block&quot; &quot;example&quot; {
+<pre class="language-code" tabindex="0"><code class="language-code">resource "aws_s3_bucket_public_access_block" "example" {
   bucket = aws_s3_bucket.example.id
 
   block_public_acls       = true
   block_public_policy     = true
   ignore_public_acls      = true
   restrict_public_buckets = true
-}
-</code></pre>
+}</code></pre>
 
 
 		</main>
