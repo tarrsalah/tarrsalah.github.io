@@ -1,6 +1,6 @@
 ---
-title: S3 automatically enables block all public access configuration per default
-description: S3 automatically enables block all public access configuration per default
+title: S3 block all public access configuration per default
+description: S3 block all public access configuration per default
 date: 2025-01-08
 slug: 08012025-s3blockallpublicacess
 tags:
