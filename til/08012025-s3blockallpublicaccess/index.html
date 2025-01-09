@@ -133,6 +133,15 @@ a {
     text-decoration: none;
 }
 
+main hr {
+    height: 0;
+    margin-top: 1rm;
+    margin-bottom: 2rm;
+    box-sizing: border-box;
+    border-width: 0;
+    border-top: 1px solid var(--color-gray-20);
+}
+
 /* a[href] { */
 /* 	color: var(--text-color-link); */
 /* } */
@@ -152,7 +161,7 @@ main :first-child {
 }
 
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 1px solid var(--color-gray-20);
 }
 header:after {
 	content: "";
@@ -286,8 +295,24 @@ header {
 	padding: 0;
 	margin: 0;
 }
+
+.post-metadata {
+    font-size: .9rem;
+}
+
+.post-metadata a {
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: .0rem .5rem;
+    background-color: var(--color-gray-20);
+}
+
+
+
 .post-metadata time {
-	margin-right: 1em;
+    font-weight: bold;
+	margin-right: 1rem;
 }
 
 /* Direct Links / Markdown Headers */
@@ -334,10 +359,12 @@ h2 + .header-anchor {
 
 <ul class="post-metadata">
 	<li><time datetime="2025-01-08">08 January 2025</time></li>
-	<li><a href="/tags/til/" class="post-tag">TIL</a>, </li>
-	<li><a href="/tags/aws/" class="post-tag">AWS</a>, </li>
+	<li><a href="/tags/til/" class="post-tag">TIL</a> </li>
+	<li><a href="/tags/aws/" class="post-tag">AWS</a> </li>
 	<li><a href="/tags/s3/" class="post-tag">S3</a></li>
 </ul>
+
+<hr/>
 
 <p>Starting form <strong>April 2023</strong> (<a href="https://aws.amazon.com/blogs/aws/heads-up-amazon-s3-security-changes-are-coming-in-april-of-2023/">Link to AWS
 blog</a>),
